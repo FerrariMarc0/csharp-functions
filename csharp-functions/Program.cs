@@ -37,7 +37,9 @@ namespace csharp_functions
                 int[] array = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 };
                 Console.WriteLine($"La somma di tutti gli elementi presenti nell'array è: { SummingAllElementsOfAnArray(array)}");
             }
+            Console.WriteLine();
 
+                                    //BONUS
             {
                 Console.Write("Quanti numeri vuoi inserire nell'array? ");
                 int userArrayLength = int.Parse(Console.ReadLine());
@@ -65,7 +67,47 @@ namespace csharp_functions
 
                 Console.WriteLine($"La somma di tutti gli elementi presenti nel tuo array è: {SummingAllElementsOfAnArray(userArray)}");
             }
+            Console.WriteLine();
+
+                            //BONUS 2
+            {
+                int number = 9;
+                int factorial = FactorialCalculator(number);
+                Console.WriteLine($"Il fattoriale di {number} è {factorial}");
+            }
+            {
+                int number = 4;
+                int result = FibonacciCalculator(number);
+                Console.WriteLine($"Il {number}-esimo della sequenza di Fibonacci è {result}");
+            }
             
+
+                // FUNZIONI BONUS 2
+
+                // Calcolo del fattoriale
+            int FactorialCalculator(int number)
+            {
+                if(number == 1)
+                {
+                    return 1;
+                }
+                else
+                {
+                    return number * FactorialCalculator(number - 1);
+                }
+            }
+
+            int FibonacciCalculator(int number)
+            {
+                if(number <= 1)
+                {
+                    return number;
+                }
+                else
+                {
+                    return FibonacciCalculator(number - 1) + FibonacciCalculator(number - 2);
+                }
+            }
 
 
             // FUNZIONI
